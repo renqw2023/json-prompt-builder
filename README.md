@@ -1,6 +1,6 @@
 # json-prompt-builder
 
-Generate Nano Banana Pro style JSON prompts from text or image references for Claude tool automation.
+Generate Nano Banana Pro style JSON prompts from text or image references.
 
 ## What's inside
 
@@ -10,11 +10,24 @@ skills/
     SKILL.md
     references/
       nano-banana-json-guidelines.md
+  claude-json-prompt-builder/
+    SKILL.md
+    references/
+      nano-banana-json-guidelines.md
 ```
 
 ## Installation
 
-Copy the skill folder into your Codex skills directory:
+### Claude
+
+Use the `skills/claude-json-prompt-builder` folder as a Claude skill.
+
+- Place the skill folder in the global directory: `~/.claude/skills/` so Claude can discover it in any project.
+- Or, provide the repository URL to Claude Code and let it install the skill for you.
+
+### Codex
+
+Copy the `skills/json-prompt-builder` folder into your Codex skills directory:
 
 - Windows: `C:\Users\<you>\.codex\skills\json-prompt-builder`
 - macOS/Linux: `~/.codex/skills/json-prompt-builder`
@@ -34,6 +47,8 @@ Output:
 
 ## References
 
+- `skills/claude-json-prompt-builder/SKILL.md`
+- `skills/claude-json-prompt-builder/references/nano-banana-json-guidelines.md`
 - `skills/json-prompt-builder/SKILL.md`
 - `skills/json-prompt-builder/references/nano-banana-json-guidelines.md`
 
