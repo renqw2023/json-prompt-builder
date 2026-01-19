@@ -1,3 +1,5 @@
+[中文](README.zh-CN.md)
+
 # json-prompt-builder
 
 Generate Nano Banana Pro style JSON prompts from text or image references.

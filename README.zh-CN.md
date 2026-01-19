@@ -1,3 +1,5 @@
+[English](README.md)
+
 # json-prompt-builder
 
 根据文本或图片参考，生成 Nano Banana Pro 风格的 JSON 提示词。
