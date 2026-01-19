@@ -1,10 +1,47 @@
-[中文](README.zh-CN.md)
+[English](README.md) | [简体中文](README.zh-CN.md)
 
 # json-prompt-builder
 
 Generate Nano Banana Pro style JSON prompts from text or image references.
 
-## What's inside
+License: GPL-3.0  |  Claude Skill / Codex Skill
+
+## Highlights
+
+- Structured JSON output with `constraints.must_keep`, `constraints.avoid`, and `negative_prompt`
+- Supports text prompts or image references (local paths or URLs)
+- Adapts fields for people, objects, scenes, and other subjects
+- Handles collage/grid layouts with explicit panel constraints
+- Accepts Chinese or English input; JSON keys are in English
+
+## Installation
+
+### Claude
+
+Use `skills/claude-json-prompt-builder` as the Claude skill folder.
+
+- Place the skill folder in the global directory: `~/.claude/skills/`
+- Or provide the repository URL to Claude Code and let it install the skill
+
+### Codex
+
+Copy `skills/json-prompt-builder` into your Codex skills directory:
+
+- Windows: `C:\Users\<you>\.codex\skills\json-prompt-builder`
+- macOS/Linux: `~/.codex/skills/json-prompt-builder`
+
+## Usage
+
+Ask the skill to turn a text description or image reference into a JSON prompt.
+
+Example input:
+- "Create a JSON prompt for a matte 3D toy robot on a clean studio background."
+
+Output:
+- A short explanation (1-3 sentences)
+- A single valid JSON object with subject-specific fields and constraints
+
+## Project Structure
 
 ```
 skills/
@@ -18,41 +55,11 @@ skills/
       nano-banana-json-guidelines.md
 ```
 
-## Installation
+## Notes
 
-### Claude
-
-Use the `skills/claude-json-prompt-builder` folder as a Claude skill.
-
-- Place the skill folder in the global directory: `~/.claude/skills/` so Claude can discover it in any project.
-- Or, provide the repository URL to Claude Code and let it install the skill for you.
-
-### Codex
-
-Copy the `skills/json-prompt-builder` folder into your Codex skills directory:
-
-- Windows: `C:\Users\<you>\.codex\skills\json-prompt-builder`
-- macOS/Linux: `~/.codex/skills/json-prompt-builder`
-
-## Usage
-
-Invoke the skill by name or ask for a JSON prompt from text or image references.
-
-Example inputs:
-- A product shot description
-- A local image path
-- An image URL
-
-Output:
-- Short explanation
-- A single valid JSON object with constraints and negative_prompt
-
-## References
-
-- `skills/claude-json-prompt-builder/SKILL.md`
-- `skills/claude-json-prompt-builder/references/nano-banana-json-guidelines.md`
-- `skills/json-prompt-builder/SKILL.md`
-- `skills/json-prompt-builder/references/nano-banana-json-guidelines.md`
+- If an image path or URL cannot be accessed, the skill asks for a description.
+- Camera/gear fields are included only for photorealistic outputs.
+- This repo contains prompt instructions only; no runtime scripts are included.
 
 ## License
 
